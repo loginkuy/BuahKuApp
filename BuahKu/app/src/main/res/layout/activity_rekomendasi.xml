@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#5BAC45"
+    android:layout_height="match_parent"
+    tools:context=".View.RekomendasiActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logoss"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rekomendasi">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rekomendasi Budaya"
+                android:fontFamily="@font/dm_sans_bold"
+                android:textColor="#E67C24"
+                />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cek Rekomendasi Buah Lokal Yang Tepat Bagimu"
+                android:fontFamily="@font/dm_sans_bold"
+                android:textColor="@color/black"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Suhu Lokasi Mu"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:textColor="@color/black"
+                    />
+                <Spinner
+                    android:id="@+id/spinerSuhu"
+                    android:textAlignment="textEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Jenis Tanah Mu"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:textColor="@color/black"
+                    />
+                <Spinner
+                    android:id="@+id/spinerTanah"
+                    android:textAlignment="textEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnRekomendasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/hijau"
+                android:text="Dapatkan Rekomendasi"
+                android:fontFamily="@font/dm_sans_bold"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRekomendasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                tools:listitem="@layout/list_budidaya_card"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

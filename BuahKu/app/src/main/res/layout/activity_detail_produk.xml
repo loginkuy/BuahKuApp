@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5BAC45"
+    tools:context=".View.DetailProduk">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDetailProduk"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_detail_produk"
+        >
+        <TextView
+            android:id="@+id/datailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Detail Produk"
+            android:fontFamily="@font/mochiy_pop_one"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:id="@+id/imageDetailProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/datailText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:id="@+id/namaDetailProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageDetailProduk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Nama Produk"
+            android:fontFamily="@font/dm_sans_bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/namaLatinProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/namaDetailProduk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Nama Latin"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/dm_sans_italic_font"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/detailDescriptionProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jeruk Keprok, juga dikenal sebagai Tangerine atau Mandarinkan, adalah salah satu varietas jeruk yang memiliki karakteristik tertentu dalam hal penampilan dan rasa. Jeruk Keprok adalah buah yang sering dimakan segar atau digunakan dalam berbagai hidangan, seperti jus jeruk segar, salad buah, atau sebagai camilan sehat. Selain rasanya yang enak, Jeruk Keprok juga kaya akan vitamin C, serat, dan antioksidan, yang bermanfaat bagi kesehatan. Rasanya yang segar dan kandungan nutrisinya menjadikannya salah satu buah jeruk yang sangat populer di seluruh dunia."
+        app:layout_constraintTop_toBottomOf="@id/layoutDetailProduk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/dm_sans_medium_font"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginTop="15dp"
+        />
+        <TextView
+            android:id="@+id/textNilaiGizi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Gizi"
+            app:layout_constraintTop_toBottomOf="@id/detailDescriptionProduct"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans_regular_font"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/detailGiziProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jeruk Keprok, juga dikenal sebagai Tangerine atau Mandarinkan, adalah salah satu varietas jeruk yang memiliki karakteristik tertentu dalam hal penampilan dan rasa. Jeruk Keprok adalah buah yang sering dimakan segar atau digunakan dalam berbagai hidangan, seperti jus jeruk segar, salad buah, atau sebagai camilan sehat. Selain rasanya yang enak, Jeruk Keprok juga kaya akan vitamin C, serat, dan antioksidan, yang bermanfaat bagi kesehatan. Rasanya yang segar dan kandungan nutrisinya menjadikannya salah satu buah jeruk yang sangat populer di seluruh dunia."
+            app:layout_constraintTop_toBottomOf="@id/textNilaiGizi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans_regular_font"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"/>
+        <TextView
+            android:id="@+id/textKhasiat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khasiat"
+            app:layout_constraintTop_toBottomOf="@id/detailGiziProduk"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans_regular_font"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/detailKhasiat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jeruk Keprok, juga dikenal sebagai Tangerine atau Mandarinkan, adalah salah satu varietas jeruk yang memiliki karakteristik tertentu dalam hal penampilan dan rasa. Jeruk Keprok adalah buah yang sering dimakan segar atau digunakan dalam berbagai hidangan, seperti jus jeruk segar, salad buah, atau sebagai camilan sehat. Selain rasanya yang enak, Jeruk Keprok juga kaya akan vitamin C, serat, dan antioksidan, yang bermanfaat bagi kesehatan. Rasanya yang segar dan kandungan nutrisinya menjadikannya salah satu buah jeruk yang sangat populer di seluruh dunia."
+            app:layout_constraintTop_toBottomOf="@id/textKhasiat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans_regular_font"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="25dp"
+            android:paddingRight="25dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5BAC45"
+    android:orientation="vertical"
+    tools:context=".View.DetailTipsActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Tips Budidaya Buah"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="@font/mochiy_pop_one"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_rekomendasi">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/judulTipsDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Melihat Kondisi Buah"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/authorTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin BuahKu - Tips Budidaya"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dm_sans_regular"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/isiTipsDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="isi"
+                    android:fontFamily="@font/dm_sans_regular"
+                    android:textSize="15sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

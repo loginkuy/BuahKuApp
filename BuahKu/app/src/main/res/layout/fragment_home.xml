@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#5BAC45"
+    android:scrollbars="none"
+    tools:context=".View.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mochiy_pop_one_font"
+        android:textColor="#F9F9F9"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/hiName"
+        android:text="Hi, Selamat Datang!" />
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tagline"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_exa"
+        android:text="Bersama Buahku Ayo Maju"
+        app:layout_constraintTop_toBottomOf="@+id/hiName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/keranjangButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/keranjang"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/layoutRekomendasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tagline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_recommend"
+        android:padding="20dp"
+
+
+        >
+        <ImageView
+            android:id="@id/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            />
+
+        <TextView
+            android:id="@+id/rekomendasiBudidaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/mochiy_pop_one"
+            android:text="Rekomendasi \nBudidaya"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/buttonRekomendasi"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRekomendasi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/rekomendasiBudidaya"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Dapatkan\nRekomendasi"
+            android:fontFamily="@font/mochiy_pop_one"
+            android:background="@drawable/bg_button_rekommend"
+            android:padding="10dp"
+            android:textSize="7dp"
+            android:textColor="@color/white"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRekomendasiMimin"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutRekomendasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/dariMimin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dari Mimin Untuk Kamu"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/mochiy_pop_one"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rekomendasiSelengkapnya"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat selengkapnya"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRekomendasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutRekomendasiMimin"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="none"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBudidaya"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recyclerRekomendasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/tipsBudidaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tips &amp; Trik Budidaya"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/mochiy_pop_one"
+            />
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/tipsBudidayaSelengkapnya"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:text="Lihat selengkapnya"-->
+<!--            android:textColor="#6B50F6"-->
+<!--            android:textAllCaps="false"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBudidaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutBudidaya"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="none"
+        android:orientation="horizontal"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
